@@ -32,7 +32,6 @@ function mudarJogador(valor){
 function checkVencedor(){
     //check linhas
     if(checkSequencia(quadrados[0],quadrados[1],quadrados[2])){
-        //console.log('venceu');
         mudarCorVencedor(quadrados[0],quadrados[1],quadrados[2]);
         declararVencedor(quadrados[0]);
         return;
@@ -50,19 +49,16 @@ function checkVencedor(){
 
     //check colunas
     if(checkSequencia(quadrados[0],quadrados[3],quadrados[6])){
-        //console.log('venceu');
         mudarCorVencedor(quadrados[0],quadrados[3],quadrados[6]);
         declararVencedor(quadrados[0]);
         return;
     }
     if(checkSequencia(quadrados[1],quadrados[4],quadrados[7])){
-        //console.log('venceu');
         mudarCorVencedor(quadrados[1],quadrados[4],quadrados[7]);
         declararVencedor(quadrados[1]);
         return;
     }
     if(checkSequencia(quadrados[2],quadrados[5],quadrados[8])){
-        //console.log('venceu');
         mudarCorVencedor(quadrados[2],quadrados[5],quadrados[8]);
         declararVencedor(quadrados[2]);
         return;
@@ -70,17 +66,16 @@ function checkVencedor(){
 
     //check diagonais
     if(checkSequencia(quadrados[0],quadrados[4],quadrados[8])){
-        //console.log('venceu');
         mudarCorVencedor(quadrados[0],quadrados[4],quadrados[8]);
         declararVencedor(quadrados[0]);
         return;
     }
     if(checkSequencia(quadrados[2],quadrados[4],quadrados[6])){
-        //console.log('venceu');
         mudarCorVencedor(quadrados[2],quadrados[4],quadrados[6]);
         declararVencedor(quadrados[2]);
         return;
     }
+    
 }
 
 function mudarCorVencedor(quadrado1,quadrado2,quadrado3){
