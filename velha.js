@@ -30,6 +30,7 @@ function mudarJogador(valor){
 }
 
 function checkVencedor(){
+
     //check linhas
     if(checkSequencia(quadrados[0],quadrados[1],quadrados[2])){
         mudarCorVencedor(quadrados[0],quadrados[1],quadrados[2]);
