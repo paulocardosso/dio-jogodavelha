@@ -76,7 +76,21 @@ function checkVencedor(){
         declararVencedor(quadrados[2]);
         return;
     }
-    
+
+    //em caso de empate, reinicia o jogo
+    if (verificarQuadrados() >= 9){
+        reinicia();
+    }
+}
+
+function verificarQuadrados(){
+    var quad = 0;
+    for(let i=0; i<quadrados.length; i++){
+        if(quadrados[i].innerHTML != '-'){
+            quad++;
+        }
+    }
+    return quad;
 }
 
 function mudarCorVencedor(quadrado1,quadrado2,quadrado3){
